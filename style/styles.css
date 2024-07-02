@@ -3,8 +3,10 @@
 :root{
     ---color-primario: #F3F5FC;
     --color-secundario: #FFFFFF;
-    --color-btn1: #072B61;
+    --color-btn1: #0A3871;
     --color-btn2: #D8DFE8;
+    --color-btns: #052051;
+    --color-btns2: #495057;
     --font: "Inter", sans-serif;
 }
 /* Global */
@@ -16,21 +18,45 @@
 body{
     background-color: var(---color-primario);
 }
+/* Texto */
+.cuadro-texto{
+    display: flex;
+}
+
+/* informacion */
+.info{
+    display: flex;
+    gap: 2px;
+}
 /* Botones */
 .botones{
     display: flex;
     gap: 24px;
+    font-family: var(--font);
 }
 .botones__encriptar{
     font-family: var(--font);
+    font-weight: 400;
     color: var(--color-secundario);
     background-color: var(--color-btn1);
     padding: 24px;
+    width: 328px;
+    border-radius: 24px;
+
 }
 
 .botones__desencriptar{
     color: var(--color-btn1);
+    font-weight: 400;
     font-family: var(--font);
     background-color: var(--color-btn2);
     padding: 24px;
+    width: 328px;
+    border-radius: 24px;
+}
+.botones__encriptar:hover{
+    background-color:var(--color-btns)
+}
+.botones__desencriptar:hover{
+    background-color: var(--color-btns2);
 }
