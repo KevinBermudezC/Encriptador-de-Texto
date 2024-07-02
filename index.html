@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Encriptador De Texto</title>
-    <link rel="stylesheet" href="/style/styles.css">
+    <link rel="stylesheet" href="./style/styles.css">
 </head>
 <body>
     <header>
@@ -12,13 +12,17 @@
     </header>
     <main>
         <section class="main">
-            <img src="/assets/Logo.png" alt="Logo Alura">
+            <img src="./assets/Logo.png" alt="Logo Alura">
             <div class="cuadro-texto">
-                <textarea placeholder="Ingrese el texto aqui"></textarea>
+                <textarea placeholder="Ingrese el texto aqui" id="textarea"></textarea>
+            </div>
+            <div>
+                <img src="./assets/bi_exclamation-circle-fill.png" alt="indicacion">
+                <p>Solo letras minúsculas y sin acentos</p>
             </div>
             <div class="botones">  
-                <button>Encriptar</button>
-                <button>Desencriptar</button>
+                <button class="botones__encriptar">Encriptar</button>
+                <button class="botones__desencriptar">Desencriptar</button>
             </div>
         </section>
 

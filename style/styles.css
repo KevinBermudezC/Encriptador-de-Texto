@@ -4,7 +4,7 @@
     ---color-primario: #F3F5FC;
     --color-secundario: #FFFFFF;
     --color-btn1: #072B61;
-    --color-btn1: #D8DFE8;
+    --color-btn2: #D8DFE8;
     --font: "Inter", sans-serif;
 }
 /* Global */
@@ -15,4 +15,22 @@
 
 body{
     background-color: var(---color-primario);
+}
+/* Botones */
+.botones{
+    display: flex;
+    gap: 24px;
+}
+.botones__encriptar{
+    font-family: var(--font);
+    color: var(--color-secundario);
+    background-color: var(--color-btn1);
+    padding: 24px;
+}
+
+.botones__desencriptar{
+    color: var(--color-btn1);
+    font-family: var(--font);
+    background-color: var(--color-btn2);
+    padding: 24px;
 }
