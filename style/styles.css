@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 /* Variables */
 :root{
-    ---color-primario: #F3F5FC;
+    --color-primario: #F3F5FC;
     --color-secundario: #FFFFFF;
     --color-btn1: #0A3871;
     --color-btn2: #D8DFE8;
@@ -16,43 +16,64 @@
 }
 
 body{
-    background-color: var(---color-primario);
+    background-color: var(--color-primario);
+    box-sizing: border-box;
 }
+/* logo */
+
 /* Texto */
 .cuadro-texto{
     display: flex;
+    gap: 8px;
+    padding: 40px;
+
+}
+#textarea{
+    background-color: var(--color-primario);
+    border: var(---color-primario);
+    width: 65%;
+    height: 750px;
+    font-family: var(--font);
+    font-size: 20px;
+    resize: none;
+    padding: 10px;
+    border-radius: 24px;
+}
+#input{
+    background-color: var(--color-secundario);
+    border: 1px solid var(--color-primario);
+    width: 30%;
+    border-radius: 24px;
+
 }
 
 /* informacion */
 .info{
     display: flex;
-    gap: 2px;
+    gap: 8px;
+
 }
 /* Botones */
 .botones{
     display: flex;
+    
     gap: 24px;
     font-family: var(--font);
 }
-.botones__encriptar{
+.botones__encriptar,
+.botones__desencriptar{
     font-family: var(--font);
     font-weight: 400;
     color: var(--color-secundario);
-    background-color: var(--color-btn1);
     padding: 24px;
     width: 328px;
     border-radius: 24px;
-
 }
-
+.botones__encriptar{
+    background-color: var(--color-btn1);
+}
 .botones__desencriptar{
-    color: var(--color-btn1);
-    font-weight: 400;
-    font-family: var(--font);
     background-color: var(--color-btn2);
-    padding: 24px;
-    width: 328px;
-    border-radius: 24px;
 }
 .botones__encriptar:hover{
     background-color:var(--color-btns)
