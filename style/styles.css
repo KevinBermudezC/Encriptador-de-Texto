@@ -1,15 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
 /* Variables */
 :root{
     --color-primario: #F3F5FC;
     --color-secundario: #FFFFFF;
-    --color-terceario: #0A3871;
+    --color-terciario: #0A3871;
     --color-btn1: #0A3871;
     --color-btn2: #D8DFE8;
     --color-btns: #052051;
     --color-btns2: #495057;
     --font: "Inter", sans-serif;
 }
+
 /* Global */
 *{
     padding: 0;
@@ -24,6 +26,9 @@ body, html {
     font-family: var(--font);
     margin: 0;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 header {
@@ -32,10 +37,11 @@ header {
 
 /* Container */
 .container {
-    display: flex;
-    width: 100%;
-    height: 100%;
-    background-color: var(--color-primario);
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    width: 90%;
+    height: 90%;
+    background-color: var(--color-secundario);
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     border-radius: 20px;
     overflow: hidden;
@@ -52,17 +58,21 @@ header {
 }
 
 .cuadro-izquierda {
-    flex: 2;
+    background-color: var(--color-secundario);
+    display: grid;
+    grid-template-columns: auto; /* Columna automática para el logo */
+    grid-template-rows: auto auto auto auto; /* Filas automáticas para cada elemento */
+    align-items: start; /* Alineación de los elementos al inicio del cuadro */
 }
 
 .cuadro-derecha {
-    flex: 1;
-    background-color: var(--color-secundario);
+    background-color: var(--color-primario);
 }
 
 .cuadro-izquierda img {
     max-width: 150px;
-    margin-bottom: 20px;
+    margin-top: 20px; /* Ajuste de margen superior para separar del borde */
+    margin-left: 20px; /* Ajuste de margen izquierdo para separar del borde */
 }
 
 .cuadro-izquierda textarea {
@@ -75,6 +85,7 @@ header {
     resize: none;
     font-size: 16px;
     background-color: var(--color-primario);
+    width: calc(100% - 40px); /* Calcula el ancho restando el padding */
 }
 
 .info {
