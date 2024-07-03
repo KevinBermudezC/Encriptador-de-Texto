@@ -56,7 +56,6 @@ body{
 /* Botones */
 .botones{
     display: flex;
-    
     gap: 24px;
     font-family: var(--font);
 }
