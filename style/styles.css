@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
-
 /* Variables */
 :root{
     --color-primario: #F3F5FC;
@@ -11,7 +10,6 @@
     --color-btns2: #495057;
     --font: "Inter", sans-serif;
 }
-
 /* Global */
 *{
     padding: 0;
@@ -26,9 +24,6 @@ body, html {
     font-family: var(--font);
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 header {
@@ -37,13 +32,10 @@ header {
 
 /* Container */
 .container {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
+    display: flex;
     width: 90%;
     height: 90%;
-    background-color: var(--color-secundario);
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    border-radius: 20px;
+    background-color: var(--color-primario);
     overflow: hidden;
 }
 
@@ -58,21 +50,20 @@ header {
 }
 
 .cuadro-izquierda {
-    background-color: var(--color-secundario);
-    display: grid;
-    grid-template-columns: auto; /* Columna automática para el logo */
-    grid-template-rows: auto auto auto auto; /* Filas automáticas para cada elemento */
-    align-items: start; /* Alineación de los elementos al inicio del cuadro */
+    flex: 2;
 }
 
 .cuadro-derecha {
-    background-color: var(--color-primario);
+    flex: 1;
+    background-color: var(--color-secundario);
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 20px;
+    margin: 40px;
 }
 
 .cuadro-izquierda img {
     max-width: 150px;
-    margin-top: 20px; /* Ajuste de margen superior para separar del borde */
-    margin-left: 20px; /* Ajuste de margen izquierdo para separar del borde */
+    margin-bottom: 20px;
 }
 
 .cuadro-izquierda textarea {
@@ -85,7 +76,6 @@ header {
     resize: none;
     font-size: 16px;
     background-color: var(--color-primario);
-    width: calc(100% - 40px); /* Calcula el ancho restando el padding */
 }
 
 .info {
@@ -95,7 +85,7 @@ header {
 }
 
 .info img {
-    margin-right: 10px;
+    padding: 0px;
 }
 
 .botones {
@@ -106,9 +96,8 @@ header {
 .botones__encriptar,
 .botones__desencriptar {
     font-weight: 400;
-    color: var(--color-secundario);
-    padding: 20px;
-    width: 150px;
+    padding: 24px;
+    width: 328px;
     border-radius: 10px;
     cursor: pointer;
     border: none;
@@ -117,10 +106,12 @@ header {
 
 .botones__encriptar {
     background-color: var(--color-btn1);
+    color: var(--color-secundario);
 }
 
 .botones__desencriptar {
     background-color: var(--color-btn2);
+    color: var(--color-terciario);
 }
 
 .botones__encriptar:hover {
