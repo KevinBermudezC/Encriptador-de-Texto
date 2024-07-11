@@ -158,10 +158,10 @@ header {
         width: 100%;
         height: 500px;
     }
-    .cuadro-derecha {
+    /* .cuadro-derecha {
         width: 350px;
         margin: 20px;
-    }
+    } */
 }
 
 @media (max-width: 768px) {
@@ -196,6 +196,10 @@ header {
     }
     .footer{
         position: relative;
+    }
+
+    .illustration{
+        display: none;
     }
 }
 
