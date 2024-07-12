@@ -212,7 +212,7 @@ header {
         height: 200px;
     }
     .cuadro-derecha {
-        width: 100%;
-        padding: 20px;
+        /* width: 100%; */
+        padding: 40px;
     }
 }
