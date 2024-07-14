@@ -79,11 +79,12 @@ header {
     border: none;
     border-radius: 10px;
     resize: none;
-    font-size: 16px;
+    font-size: 30px;
     background-color: var(--color-primario);
 }
 textarea{
     text-align: center;
+    justify-content: center;
 }
 .info {
     display: flex;
@@ -226,9 +227,7 @@ textarea{
         height: 36px;
         margin: 20px;
     }
-    .cuadro-izquierda textarea {
-        height: 200px;
-    }
+
     .cuadro-derecha {
         /* width: 100%; */
         padding: 40px;

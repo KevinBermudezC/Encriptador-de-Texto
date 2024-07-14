@@ -1,6 +1,6 @@
 // Función para validar que el texto contiene solo letras minúsculas sin acentos ni caracteres especiales
 function esValido(texto) {
-    return /^[a-z]+$/.test(texto);
+    return /^[a-z\s]+$/.test(texto);
 }
 // Función para encriptar el texto
 function encriptarTexto(texto) {
