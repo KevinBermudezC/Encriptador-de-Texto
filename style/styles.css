@@ -82,7 +82,9 @@ header {
     font-size: 16px;
     background-color: var(--color-primario);
 }
-
+textarea{
+    text-align: center;
+}
 .info {
     display: flex;
     align-items: flex-start;
@@ -127,14 +129,30 @@ header {
     background-color: var(--color-btns2);
     color: var(--color-btn2);
 }
+.botones__copiar {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: var(--color-btn1);
+    color:var(--color-primario);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.botones__copiar:hover{
+    background-color: var(--color-btns);
+}
 
 .illustration {
     width: 100%;
     max-width: 300px;
     margin-bottom: 20px;
 }
+.mensaje-resultado {
+    font-size: 30px;
+    font-weight: bold;
+}
 
-.mensaje {
+.texto {
     font-size: 18px;
     font-weight: bold;
 }

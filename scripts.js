@@ -27,16 +27,22 @@ function desencriptarTexto(textoEncriptado) {
     return textoEncriptado.replace(/enter|imes|ai|ober|ufat/g, encriptado => reglas[encriptado]);
 }
 
+// Función para mostrar el resultado y ocultar elementos
+function mostrarResultado(texto) {
+    document.querySelector('.illustration').style.display = 'none';
+    document.querySelector('.sub-mensaje').style.display = 'none';
+    const resultado = document.querySelector('#resultado');
+    resultado.innerText = texto;
+    resultado.classList.add('mensaje-resultado');
+    document.querySelector('#btn-copiar').style.display = 'block';
+}
+
 // Evento para encriptar el texto al hacer clic en el botón de encriptar
 document.querySelector('#btn-encrip').addEventListener('click', () => {
     const texto = document.querySelector('#textarea').value;
     if (esValido(texto)) {
         const textoEncriptado = encriptarTexto(texto);
-        console.log(textoEncriptado);
-        // Aquí puedes agregar el código para mostrar el texto encriptado en la página
-        document.querySelector('#resultado').innerText = textoEncriptado;
-        document.querySelector('.illustration').style.display = 'none'
-        document.querySelector('.sub-mensaje').style.display = 'none'
+        mostrarResultado(textoEncriptado);
     } else {
         alert('El texto debe contener solo letras minúsculas, sin acentos ni caracteres especiales.');
     }
@@ -46,7 +52,14 @@ document.querySelector('#btn-encrip').addEventListener('click', () => {
 document.querySelector('#btn-desencrip').addEventListener('click', () => {
     const textoEncriptado = document.querySelector('#textarea').value;
     const textoDesencriptado = desencriptarTexto(textoEncriptado);
-    console.log(textoDesencriptado);
-    // Aquí puedes agregar el código para mostrar el texto desencriptado en la página
-    document.querySelector('#resultado').innerText = textoDesencriptado;
+    mostrarResultado(textoDesencriptado);
+});
+
+document.querySelector('#btn-copiar').addEventListener('click', () => {
+    const textoEncriptado = document.querySelector('#resultado').innerText;
+    navigator.clipboard.writeText(textoEncriptado).then(() => {
+        alert('Texto copiado al portapapeles');
+    }).catch(err => {
+        alert('Error al copiar el texto: ', err);
+    });
 });
